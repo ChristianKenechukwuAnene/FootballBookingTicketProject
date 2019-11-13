@@ -29,6 +29,8 @@ public class BookingFrame extends JFrame implements ActionListener{
             }
     public void actionPerformed(ActionEvent event) {
         // add code to increment the buttonCount and display it on the button
-
+        LoginPage Log = new LoginPage();
+        Log.setVisible(true);
+        setVisible(false);
     }
     }
