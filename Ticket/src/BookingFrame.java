@@ -16,7 +16,7 @@ public class BookingFrame extends JFrame implements ActionListener{
             public BookingFrame () {
 
                 setTitle("KEECEE TICKETING");
-                JLabel l1 = new JLabel(new ImageIcon("C:\\Users\\t00204290\\IdeaProjects\\FootballBookingTicketProject\\Ticket\\Apix.PNG"));
+                JLabel l1 = new JLabel(new ImageIcon("C:\\Users\\User\\IdeaProjects\\FootballBookingTicketProject\\Ticket\\Apix.PNG"));
                 add(l1, BorderLayout.CENTER);
 
                 JButton b1 = new JButton("Book Now");
