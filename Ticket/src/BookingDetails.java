@@ -3,7 +3,7 @@ import java.awt.event.*;
 import java.awt.*;
 import java.sql.*;
 
-public class BookingDetails extends JFrame {
+public class BookingDetails extends JFrame implements ActionListener{
 
     String[] fixture =   {"Vs: Liverpool    2020-12-04   4:00pm","Vs: Manchester City   2020-15-04  12:30pm"," Vs: LiverPool FC   2020-15-04  5:00pm","Vs: Arsenal FC   2020-15-04  4:30pm" };
     String[] block =   {"W120","W121","W122","W123","W124","124"};
@@ -12,11 +12,13 @@ public class BookingDetails extends JFrame {
 
     JFrame B;
     JLabel fixtureLabel=new JLabel("FIXTURE :");
-    JLabel nameLabel=new JLabel("NAME");
-    JLabel emailLabel=new JLabel("EMAIL");
-    JLabel blockLabel=new JLabel("BLOCK");
-    JLabel rowLabel=new JLabel("ROW");
-    JLabel seatLabel=new JLabel("SEAT");
+    JLabel nameLabel=new JLabel("NAME :");
+    JLabel emailLabel=new JLabel("EMAIL :");
+    JLabel blockLabel=new JLabel("BLOCK :");
+    JLabel rowLabel=new JLabel("ROW :");
+    JLabel seatLabel=new JLabel("SEAT :");
+    JButton registerButton=new JButton("REGISTER");
+    JButton resetButton=new JButton("RESET");
 
     JTextField nameTextField=new JTextField();
     JComboBox fixtureComboBox=new JComboBox(fixture);
@@ -52,23 +54,69 @@ public class BookingDetails extends JFrame {
         B.add(fixtureLabel);
         Font font = new Font("Verdana", Font.BOLD, 12);
         fixtureLabel.setFont(font);
+        fixtureLabel.setForeground(Color.white);
 
         blockComboBox.setBounds(150,240,150,30);
         B.add(blockComboBox);
-        blockLabel.setBounds(20,40,120,70);
+        blockLabel.setBounds(20,240,120,40);
         B.add(blockLabel);
-        Font font = new Font("Verdana", Font.BOLD, 12);
         blockLabel.setFont(font);
+        blockLabel.setForeground(Color.white);
+
+        emailTextField.setBounds(150,180,250,30);
+        B.add(emailTextField);
+        emailLabel.setBounds(20,180,150,40);
+        B.add(emailLabel);
+        emailLabel.setFont(font);
+        emailLabel.setForeground(Color.white);
+
+        nameTextField.setBounds(150,100,250,30);
+        B.add(nameTextField);
+        nameLabel.setBounds(20,100,120,40);
+        B.add(nameLabel);
+        nameLabel.setFont(font);
+        nameLabel.setForeground(Color.white);
 
         rowComboBox.setBounds(150,300,150,30);
         B.add(rowComboBox);
+        rowLabel.setBounds(20,300,120,40);
+        B.add(rowLabel);
+        rowLabel.setFont(font);
+        rowLabel.setForeground(Color.white);
 
         seatComboBox.setBounds(150,360,150,30);
         B.add(seatComboBox);
+        seatLabel.setBounds(20,360,120,40);
+        B.add(seatLabel);
+        seatLabel.setFont(font);
+        seatLabel.setForeground(Color.white);
 
+        registerButton.setBounds(70,450,100,35);
+        B.add(registerButton);
+        resetButton.setBounds(280,450,100,35);
+        B.add(resetButton);
+
+        registerButton.addActionListener(this);
+         resetButton.addActionListener(this);
     }
 
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource()== registerButton)
+        {
+        BookingD Book = new BookingD((String)fixtureComboBox.getSelectedItem(),
+                nameTextField.getText(),
+                emailTextField.getText(),
+                (String)blockComboBox.getSelectedItem(),
+                (String)rowComboBox.getSelectedItem(),
+                (String)seatComboBox.getSelectedItem());
+        JOptionPane.showMessageDialog(null,Book.toString());}
 
+        else {
+
+        }
+
+    }
 
 
 }

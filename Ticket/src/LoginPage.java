@@ -10,10 +10,11 @@ public class LoginPage extends JFrame implements ActionListener{
     JTextField usernameField;
     JPasswordField passwordField;
     JPanel jpanel,jp;
+    static LoginPage Ticket;
 
 
     public static void main (String [] args) {
-        LoginPage Ticket = new LoginPage();
+        Ticket = new LoginPage();
         Ticket.setVisible(true);             }
 
 
@@ -89,11 +90,14 @@ public class LoginPage extends JFrame implements ActionListener{
                 //converting the char[] to a String
                 String passwordText = new String(passwordCharacters);
 
-                if(usernameField.getText().equals("Keecee") &&
-                        passwordText.equals("123abc"))
+                if(usernameField.getText().equals("keecee") &&
+                        passwordText.equals("123abc")){
                     JOptionPane.showMessageDialog(null,"Welcome to the system " +
                                     usernameField.getText(),"Authenticated",
                             JOptionPane.INFORMATION_MESSAGE);
+                BookingDetails B = new BookingDetails();
+                //Ticket.setVisible(false);
+                B.setVisible(true);}
                 else
                     JOptionPane.showMessageDialog(null,"Invalid username/password " +
                             "combination","Not authenticated",JOptionPane.INFORMATION_MESSAGE);
