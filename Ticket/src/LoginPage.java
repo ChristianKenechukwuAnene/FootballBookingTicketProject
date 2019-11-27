@@ -18,7 +18,7 @@ public class LoginPage extends JFrame implements ActionListener{
         Ticket.setVisible(true);             }
 
 
-    //setting up jframe window with all the Panels Button
+    //setting up Jframe window with all the Panels Button
 
     public LoginPage () {
 
@@ -36,7 +36,7 @@ public class LoginPage extends JFrame implements ActionListener{
         lab1.setForeground(Color.blue);
 
         // The Image Icon on The Panel
-        JLabel l1 = new JLabel(new ImageIcon("C:\\Users\\User\\IdeaProjects\\FootballBookingTicketProject\\Ticket\\pix4.jpg"));
+        JLabel l1 = new JLabel(new ImageIcon("Ticket\\pix4.jpg"));
         add(l1, BorderLayout.CENTER);
 
 
