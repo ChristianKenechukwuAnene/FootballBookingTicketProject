@@ -20,7 +20,7 @@ public class BookingFrame extends JFrame implements ActionListener{
                 /**setting up the book now button on the frame**/
                 JButton b1 = new JButton("Book Now");
                 add(b1, BorderLayout.SOUTH);
-               setResizable(false);
+                setResizable(false);
                 setSize(500, 500);
                 setVisible(true);
 

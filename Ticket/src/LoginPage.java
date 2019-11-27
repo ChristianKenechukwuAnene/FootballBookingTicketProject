@@ -30,6 +30,7 @@ public class LoginPage extends JFrame implements ActionListener{
         setSize(400,300);
         setLayout(new FlowLayout());
         setVisible(true);
+        setResizable(false);
         Font font = new Font("Verdana", Font.BOLD, 25);
         lab.setFont(font);
         lab.setForeground(Color.DARK_GRAY);
