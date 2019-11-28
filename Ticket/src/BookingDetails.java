@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.awt.*;
 import java.sql.*;
+import java.util.ArrayList;
 
 public class BookingDetails extends JFrame implements ActionListener{
 
@@ -9,6 +10,18 @@ public class BookingDetails extends JFrame implements ActionListener{
     String[] block =   {"W120","W121","W122","W123","W124","124"};
     String[] row =   {"010","011","012","013","014","015"};
     String[] seat =  {"S11","S12","S13","S14","S15","S16"};
+
+    //access the arraylist of all fixtures here
+    static ArrayList<Fixtures> allFixtures = new ArrayList<Fixtures>();
+
+    //create an empty String array called "fixtures" to hold the individual fixture details
+    String fixtures[];
+
+    //now write a for loop to populate the String array with the contents of the array list
+    for(int i=0; i<fixture.();i++){
+
+    }
+
 
     JFrame B;
     JLabel fixtureLabel=new JLabel("FIXTURE :");
@@ -21,7 +34,7 @@ public class BookingDetails extends JFrame implements ActionListener{
     JButton resetButton=new JButton("RESET");
 
     JTextField nameTextField=new JTextField();
-    JComboBox fixtureComboBox=new JComboBox(fixture);
+    JComboBox fixtureComboBox=new JComboBox(fixtures);
     JTextField emailTextField=new JTextField();
     JComboBox blockComboBox=new JComboBox(block);
     JComboBox rowComboBox=new JComboBox(row);

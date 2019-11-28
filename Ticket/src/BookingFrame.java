@@ -47,6 +47,8 @@ public class BookingFrame extends JFrame implements ActionListener{
             System.exit(0);
         }
          else if(menuName.equals("Latest Fixture")) {
+            /**SeasonFixtures Fixture = new SeasonFixtures();
+            Fixture.setVisiable(true);**/
 
 
             }
