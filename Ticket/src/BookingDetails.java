@@ -18,9 +18,9 @@ public class BookingDetails extends JFrame implements ActionListener{
     String fixtures[];
 
     //now write a for loop to populate the String array with the contents of the array list
-    for(int i=0; i<fixture.();i++){
+   // for(int i=0; i<fixture.();i++){
 
-    }
+   // }
 
 
     JFrame B;

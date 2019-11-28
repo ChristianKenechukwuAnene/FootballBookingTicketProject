@@ -99,7 +99,7 @@ static JTextField matchField, dateField, timeField ;
                         (String)dateField.getText(),
                         (String)timeField.getText());
 
-                allFixtures.add();
+               // allFixtures.add();
             }
 
             //now add the Fixtures object to the array list of Fixtures called allFixtures
