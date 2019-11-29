@@ -6,6 +6,8 @@ public class BookingFrame extends JFrame implements ActionListener{
     // private instance variables
     JButton b1;
     JMenu fileMenu;
+    SeasonFixtures Fixture;
+    LoginPage Log;
 
 
     public static void main (String [] args) {
@@ -36,7 +38,7 @@ public class BookingFrame extends JFrame implements ActionListener{
             }
     public void actionPerformed(ActionEvent event) {
         // add code to increment the buttonCount and display it on the button
-        LoginPage Log = new LoginPage();
+        Log = new LoginPage();
         Log.setVisible(true);
         setVisible(false);
 
@@ -46,9 +48,10 @@ public class BookingFrame extends JFrame implements ActionListener{
         if (menuName.equals("Quit")) {
             System.exit(0);
         }
-         else if(menuName.equals("Latest Fixture")) {
-            /**SeasonFixtures Fixture = new SeasonFixtures();
-            Fixture.setVisiable(true);**/
+         else if(menuName.equals("Season Fixture")) {
+            Fixture = new SeasonFixtures();
+            Log.setVisible(false);
+            Fixture.setVisible(true);
 
 
             }
@@ -64,7 +67,7 @@ public class BookingFrame extends JFrame implements ActionListener{
 
         // create the first item
         // make sure the program is listening for clicks: handle them in 'this' class
-        item = new JMenuItem("Season Fixture..."); //Season Fixture...
+        item = new JMenuItem("Season Fixture"); //Season Fixture...
         item.addActionListener( this );
         fileMenu.add( item );
 

@@ -18,7 +18,7 @@ static JTextField matchField, dateField, timeField ;
         return allFixtures;
     }
 
-    public static void main (String[] args) {
+    public SeasonFixtures() {
 
         //code below added by JB for preliminary test of Fixtures class and associated allFixtures array
 

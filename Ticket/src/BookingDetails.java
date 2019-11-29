@@ -33,10 +33,10 @@ public class BookingDetails extends JFrame implements ActionListener{
     JButton registerButton=new JButton("REGISTER");
     JButton resetButton=new JButton("RESET");
 
-    JTextField nameTextField=new JTextField();
-    JComboBox fixtureComboBox=new JComboBox(fixtures);
+    JTextField nameTextField = new JTextField();
+    JComboBox fixtureComboBox = new JComboBox(fixture);
     JTextField emailTextField=new JTextField();
-    JComboBox blockComboBox=new JComboBox(block);
+    JComboBox blockComboBox =new JComboBox(block);
     JComboBox rowComboBox=new JComboBox(row);
     JComboBox seatComboBox=new JComboBox(seat);
 
