@@ -95,11 +95,13 @@ static JTextField matchField, dateField, timeField ;
             //when submit button is pressed then you create a Fixtures object from the values in the text-feilds
             if (e.getSource()== b)
             {
-                Fixtures match = new Fixtures((String) matchField.getText(),
-                        (String)dateField.getText(),
-                        (String)timeField.getText());
+               // Fixtures match = new Fixtures((String) matchField.getText(),
+                String mtch="", dat ="",tim ="";
+                mtch = matchField.getText();
+                        dat = dateField.getText();
+                        tim = timeField.getText();
 
-               // allFixtures.add();
+               allFixtures.add(new Fixtures(mtch,dat,tim));
             }
 
             //now add the Fixtures object to the array list of Fixtures called allFixtures

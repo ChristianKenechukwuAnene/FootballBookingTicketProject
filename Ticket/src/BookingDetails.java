@@ -18,7 +18,7 @@ public class BookingDetails extends JFrame implements ActionListener{
     String fixtures[];
 
     //now write a for loop to populate the String array with the contents of the array list
-   // for(int i=0; i<fixture.();i++){
+
 
    // }
 
@@ -111,6 +111,12 @@ public class BookingDetails extends JFrame implements ActionListener{
 
         registerButton.addActionListener(this);
          resetButton.addActionListener(this);
+
+        for(int i=0; i<allFixtures.size();i++){
+            if(allFixtures != null){
+                fixtures[i] = allFixtures.get(i).toString();
+            }
+        }
     }
 
     @Override
